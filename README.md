@@ -21,34 +21,34 @@ Compound modules now available at https://github.com/compoundjs
 用法
 =====
 
-    # initialize app
+    # 初始化app
     $ compound init blog && cd blog
     $ npm install
 
-    # generate scaffold
+    # 创建脚手架
     $ compound generate crud post title content published:boolean
 
-    # run server on port 3000
+    # 启动服务器，端口3000
     $ compound s 3000
 
-    # visit app
+    # 访问app
     $ open http://localhost:3000/posts
 
-Short functionality review
+功能概览
 ==========================
 
-CLI tool
+命令行工具
 --------
 
     Usage: compound command <strong>[argument(s)]</strong>
 
     Commands:
-      h,  help                     Display usage information
-      i,  init                     Initialize compound app
-      g,  generate [smth]          Generate something awesome
-      r,  routes [filter]          Display application routes
-      c,  console                  Debug console
-      s,  server [port]            Run compound server
+      h,  help                     显示用法信息
+      i,  init                     初始化compound应用
+      g,  generate [smth]          创建一些牛逼的东西
+      r,  routes [filter]          显示应用的路由
+      c,  console                  Debug终端
+      s,  server [port]            运行compound服务器
 
 #### compound init <strong>[appname][ key(s)]</strong>
     keys:
@@ -70,10 +70,10 @@ http://compoundjs.github.com/generators
 #### compound routes - print routes map (see details below)
 
 
-Directory structure
+目录结构
 -------------------
 
-On initialization directories tree generated, like that:
+初始的目录树像下面这样：
 
     .
     |-- app
@@ -116,11 +116,10 @@ On initialization directories tree generated, like that:
         |-- tsl.cert
         `-- tsl.key
 
-HTTPS Support
+HTTPS 支持
 -------------
 
-Just place your key and cert into config directory, compound will use it.
-Default names for keys are `tsl.key` and `tsl.cert`, but you can store in in another place, in that case just pass filenames to createServer function:
+只需把你的key和证书放到config目录下，compound就能使用他们了。默认文件名是`tsl.key`和`tsl.cert`, but you can store in in another place, in that case just pass filenames to createServer function:
 `server.js`
 
     require('compound').createServer({key: '/tmp/key.pem', cert: '/tmp/cert.pem'});
