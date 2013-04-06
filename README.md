@@ -131,10 +131,10 @@ Few helpful commands:
     # generate cert
     openssl req -new -x509 -key config/tsl.key  -out config/tsl.cert -days 1095 -batch
 
-Routing
+路由
 -------
 
-Now we do not have to tediously describe REST rotes for each resource, enough to write in `config/routes.js` code like this:
+现在我们不需要沉闷地为每一个资源定义REST路由，在`config/routes.js`里写下如下代码就足够了：
 
     exports.routes = function (map) {
         map.resources('posts', function (post) {
@@ -142,7 +142,7 @@ Now we do not have to tediously describe REST rotes for each resource, enough to
         });
     };
 
-instead of:
+与下面的代码实现的效果一样：
 
     var ctl = require('./lib/posts_controller.js');
     app.get('/posts/new.:format?', ctl.new);
@@ -162,7 +162,7 @@ instead of:
     app.delete('/posts/:post_id/comments/:id.:format?', com_ctl.destroy);
     app.get('/posts/:post_id/comments/:id/edit.:format?', com_ctl.edit);
 
-and you can more finely tune the resources to specify certain actions, middleware, and other. Here example routes of [my blog][1]:
+你还可以更友好地对action，中间件，或者其他别的什么声明资源。下面给出一个[my blog][1]的路由的例子：
 
     exports.routes = function (map) {
         map.get('/', 'posts#index');
@@ -177,7 +177,7 @@ and you can more finely tune the resources to specify certain actions, middlewar
         });
     };
 
-since version 0.2.0 it is possible to use generic routes:
+从0.2.0版本开始也可以使用通用的路由：
 
     exports.routes = function (map) {
         map.get(':controller/:action/:id');
