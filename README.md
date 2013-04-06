@@ -225,7 +225,7 @@ Filter by helper name:
 Helpers
 -------
 
-In addition to regular helpers `linkTo`, `formFor`, `javascriptIncludeTag`, `formFor`, etc. there are also helpers for routing: each route generates a helper method that can be invoked in a view:
+除了一般的helpers方法`linkTo`、`formFor`、`javascriptIncludeTag`、`formFor`等，还有一些路由的helpers方法： for routing: each route generates a helper method that can be invoked in a view:
 
     <%- link_to("New post", newAdminPost) %>
     <%- link_to("New post", editAdminPost(post)) %>
