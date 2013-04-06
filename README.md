@@ -7,18 +7,18 @@ CompoundJS - MVC framework for NodeJS&trade;. It allows you to build web applica
 
 Compound modules now available at https://github.com/compoundjs
 
-Installation
+安装
 ============
 
-Option 1: npm
+方式 1: 通过npm
 
     $ sudo npm install compound -g
 
-Option 2: GitHub
+方式 2: 通过GitHub
 
     $ sudo npm install 1602/compound
 
-Usage
+用法
 =====
 
     # initialize app
